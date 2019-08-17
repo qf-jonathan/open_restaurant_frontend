@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Table } from '../../models/table';
 
 @Component({
   selector: 'app-table',
@@ -6,6 +7,8 @@ import { Component, ElementRef, Input, OnInit } from '@angular/core';
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnInit {
+  @Input() table: Table;
+
   @Input() set size(value: number) {
     this.el.nativeElement.style.height = `${value}px`;
     this.el.nativeElement.style.width = `${value}px`;
@@ -17,4 +20,7 @@ export class TableComponent implements OnInit {
   ngOnInit() {
   }
 
+  orderFilter(state: number) {
+    return this.table.orders.filter(e => e.state === state);
+  }
 }

@@ -11,6 +11,7 @@ import { TableComponent } from './components/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AmbientComponent } from './components/ambient/ambient.component';
 import { AmbientPageComponent } from './pages/ambient-page/ambient-page.component';
+import { MenuCreatorComponent } from './components/menu-creator/menu-creator.component';
 
 @NgModule({
   declarations: [
@@ -18,15 +19,17 @@ import { AmbientPageComponent } from './pages/ambient-page/ambient-page.componen
     AttentionPageComponent,
     TableComponent,
     AmbientComponent,
-    AmbientPageComponent
+    AmbientPageComponent,
+    MenuCreatorComponent
   ],
+  entryComponents: [MenuCreatorComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialContainerModule,
-    FlexLayoutModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
