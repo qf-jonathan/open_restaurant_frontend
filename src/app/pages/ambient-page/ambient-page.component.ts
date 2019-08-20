@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Ambient } from '../../models/ambient';
 import { MatDialog } from '@angular/material';
 import { MenuCreatorComponent } from '../../components/menu-creator/menu-creator.component';
+import { Table } from '../../models/table';
 
 @Component({
   selector: 'app-ambient-page',
@@ -54,10 +55,11 @@ export class AmbientPageComponent implements OnInit, OnDestroy {
     console.log(this.ambient);
   }
 
-  openOrderCreator(tableId: number) {
+  openOrderCreator(table: Table) {
     this.dialog.open(MenuCreatorComponent, {
-      width: '550px',
-      maxWidth: '100%',
+      width: 'calc(100vw - 20px)',
+      height: 'calc(100vh - 20px)',
+      data: table
     });
   }
 }

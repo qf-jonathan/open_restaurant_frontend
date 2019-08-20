@@ -1,1 +1,15 @@
-<p>menu-creator works!</p>
+<div fxFill fxLayout="column">
+  <div fxFlex fxLayout="row wrap"
+       fxLayoutAlign="center start"
+       class="menu-item-container"
+       style="overflow: auto">
+    <div *ngFor="let menuItem of menu" class="menu-item">
+      {{menuItem.name}}
+    </div>
+  </div>
+  <div fxLayout="row">
+    <span fxFlex></span>
+    <button mat-button (click)="close()">Guardar</button>
+    <button mat-button (click)="close()">Cerrar</button>
+  </div>
+</div>
