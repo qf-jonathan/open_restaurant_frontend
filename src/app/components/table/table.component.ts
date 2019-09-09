@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Table } from '../../models/table';
 
 @Component({
@@ -9,12 +9,7 @@ import { Table } from '../../models/table';
 export class TableComponent implements OnInit {
   @Input() table: Table;
 
-  @Input() set size(value: number) {
-    this.el.nativeElement.style.height = `${value}px`;
-    this.el.nativeElement.style.width = `${value}px`;
-  }
-
-  constructor(private el: ElementRef) {
+  constructor() {
   }
 
   ngOnInit() {

@@ -1,8 +1,7 @@
-<div fxFlexFill fxLayout="column">
+<div class="fill column">
   <mat-toolbar class="toolbar mat-elevation-z3" color="primary">Atención</mat-toolbar>
-  <div fxFlex fxLayout="row wrap" class="ambient-container" fxLayoutAlign="space-evenly center">
-    <app-ambient fxFlex="140px"
-                 *ngFor="let ambient of ambients"
+  <div class="container">
+    <app-ambient *ngFor="let ambient of ambients"
                  [ambient]="ambient"
                  [routerLink]="['/ambient', ambient.id]">
     </app-ambient>

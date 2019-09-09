@@ -1,12 +1,11 @@
-<div fxFlexFill fxLayout="column">
+<div class="fill column">
   <mat-toolbar class="toolbar mat-elevation-z3" color="primary" *ngIf="ambient">
     Ambiente: {{ambient?.name}}
   </mat-toolbar>
-  <div fxFlex fxLayout="row wrap" class="ambient-container" fxLayoutAlign="space-evenly center">
+  <div class="container">
     <app-table
       *ngFor="let table of ambient?.tables"
       [table]=table
-      [size]="120"
       (click)="openOrderCreator(table)">
     </app-table>
   </div>
