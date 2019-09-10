@@ -10,7 +10,7 @@ import { TableComponent } from './components/table/table.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AmbientComponent } from './components/ambient/ambient.component';
 import { AmbientPageComponent } from './pages/ambient-page/ambient-page.component';
-import { MenuCreatorComponent } from './components/menu-creator/menu-creator.component';
+import { OrderCreatorComponent } from './components/order-creator/order-creator.component';
 
 @NgModule({
   declarations: [
@@ -19,9 +19,9 @@ import { MenuCreatorComponent } from './components/menu-creator/menu-creator.com
     TableComponent,
     AmbientComponent,
     AmbientPageComponent,
-    MenuCreatorComponent
+    OrderCreatorComponent
   ],
-  entryComponents: [MenuCreatorComponent],
+  entryComponents: [OrderCreatorComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

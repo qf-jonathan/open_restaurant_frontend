@@ -5,6 +5,13 @@
   width: calc(100% / 3 - 5px);
   height: 75px;
   box-sizing: border-box;
+  margin: 5px 0 5px 0;
+  cursor: pointer;
+}
+
+.button {
+  width: 100px;
+  margin: 0 5px 0 5px;
 }
 
 .expand-content {
@@ -12,6 +19,7 @@
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: space-between;
+  padding: 0 5px 0 5px;
   overflow: auto;
 }
 

@@ -1,0 +1,12 @@
+<div class="fill column">
+  <h2 mat-dialog-title>Orden</h2>
+  <div class="expand-content row">
+    <div *ngFor="let menuItem of menu" class="menu-item" (click)="addOrder(menuItem)">
+      {{menuItem.name}} {{getOrderStatus(menuItem)}}
+    </div>
+  </div>
+  <div class="row reversed">
+    <button mat-raised-button (click)="close()" color="primary" class="button">Guardar</button>
+    <button mat-raised-button (click)="close()" color="warn" class="button">Cancelar</button>
+  </div>
+</div>

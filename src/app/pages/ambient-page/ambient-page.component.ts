@@ -4,7 +4,7 @@ import { WebSocketSubject } from 'rxjs/webSocket';
 import { ActivatedRoute } from '@angular/router';
 import { Ambient } from '../../models/ambient';
 import { MatDialog } from '@angular/material';
-import { MenuCreatorComponent } from '../../components/menu-creator/menu-creator.component';
+import { OrderCreatorComponent } from '../../components/order-creator/order-creator.component';
 import { Table } from '../../models/table';
 
 @Component({
@@ -56,7 +56,7 @@ export class AmbientPageComponent implements OnInit, OnDestroy {
   }
 
   openOrderCreator(table: Table) {
-    this.dialog.open(MenuCreatorComponent, {
+    this.dialog.open(OrderCreatorComponent, {
       width: 'calc(100vw - 20px)',
       height: 'calc(100vh - 20px)',
       data: table
