@@ -1,9 +1,12 @@
 <div class="fill column">
   <h2 mat-dialog-title>Orden</h2>
   <div class="expand-content row">
-    <div *ngFor="let menuItem of menu" class="menu-item" (click)="addOrder(menuItem)">
-      {{menuItem.name}} {{getOrderStatus(menuItem)}}
-    </div>
+    <app-menu-item
+      *ngFor="let menuItem of menu" [menu]="menuItem"
+      [counter]="getOrderStatus(menuItem)"
+      (addOrder)="addOrder($event)"
+      (removeOrder)="removeOrder($event)">
+    </app-menu-item>
   </div>
   <div class="row reversed">
     <button mat-raised-button (click)="close()" color="primary" class="button">Guardar</button>

@@ -36,6 +36,12 @@ export class OrderCreatorComponent implements OnInit {
     });
   }
 
+  removeOrder(menu: Menu) {
+    if (menu.id in this.orderResume && this.orderResume[menu.id].length > 0) {
+      this.orderResume[menu.id].splice(-1, 1);
+    }
+  }
+
   getOrderStatus(menu: Menu) {
     if (menu.id in this.orderResume) {
       return this.orderResume[menu.id].length;

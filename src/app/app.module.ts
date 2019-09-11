@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AmbientComponent } from './components/ambient/ambient.component';
 import { AmbientPageComponent } from './pages/ambient-page/ambient-page.component';
 import { OrderCreatorComponent } from './components/order-creator/order-creator.component';
+import { MenuItemComponent } from './components/menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { OrderCreatorComponent } from './components/order-creator/order-creator.
     TableComponent,
     AmbientComponent,
     AmbientPageComponent,
-    OrderCreatorComponent
+    OrderCreatorComponent,
+    MenuItemComponent
   ],
   entryComponents: [OrderCreatorComponent],
   imports: [
