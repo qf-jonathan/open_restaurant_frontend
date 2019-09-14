@@ -3,15 +3,42 @@
   <div class="state-container row">
     <div class="state">
       <div class="state-title">Ordenes</div>
-      <div class="state-content"></div>
+      <div class="state-content">
+        <div *ngFor="let order of ordersType(1)" class="order">
+          <p>
+            Mesa: {{ order.table['label'] }}
+          <p>
+          <p>
+            {{ order.menu['name'] }}
+          </p>
+        </div>
+      </div>
     </div>
     <div class="state left-separator">
       <div class="state-title">Preparación</div>
-      <div class="state-content"></div>
+      <div class="state-content">
+        <div *ngFor="let order of ordersType(2)" class="order">
+          <p>
+            Mesa: {{ order.table['label'] }}
+          <p>
+          <p>
+            {{ order.menu['name'] }}
+          </p>
+        </div>
+      </div>
     </div>
     <div class="state left-separator">
       <div class="state-title">Listo</div>
-      <div class="state-content"></div>
+      <div class="state-content">
+        <div *ngFor="let order of ordersType(3)" class="order">
+          <p>
+            Mesa: {{ order.table['label'] }}
+          <p>
+          <p>
+            {{ order.menu['name'] }}
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
