@@ -56,10 +56,17 @@ export class AmbientPageComponent implements OnInit, OnDestroy {
   }
 
   openOrderCreator(table: Table) {
-    this.dialog.open(OrderCreatorComponent, {
+    const dialogRef = this.dialog.open(OrderCreatorComponent, {
       width: 'calc(100vw - 20px)',
       height: 'calc(100vh - 20px)',
       data: table
     });
+    dialogRef.afterClosed().subscribe((result) => {
+      this.processOrder(result);
+    });
+  }
+
+  processOrder(result: any) {
+    console.log(result);
   }
 }

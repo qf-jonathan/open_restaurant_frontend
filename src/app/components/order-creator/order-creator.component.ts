@@ -23,6 +23,22 @@ export class OrderCreatorComponent implements OnInit {
     this.api.getMenu().subscribe((menuList) => {
       this.menu = menuList;
     });
+    this.setInitial();
+  }
+
+  setInitial() {
+    this.table.orders.forEach((order) => {
+      if (order.state === 1) {
+        if (!(order.menu in this.orderResume)) {
+          this.orderResume[order.menu] = [];
+        }
+        this.orderResume[order.menu].push({
+          menu: order.menu,
+          table: this.table.id,
+          detail: ''
+        });
+      }
+    });
   }
 
   addOrder(menu: Menu) {
@@ -42,11 +58,15 @@ export class OrderCreatorComponent implements OnInit {
     }
   }
 
-  getOrderStatus(menu: Menu) {
+  getOrderCounter(menu: Menu) {
     if (menu.id in this.orderResume) {
       return this.orderResume[menu.id].length;
     }
     return 0;
+  }
+
+  save() {
+    this.dialogRef.close(this.orderResume);
   }
 
   close() {

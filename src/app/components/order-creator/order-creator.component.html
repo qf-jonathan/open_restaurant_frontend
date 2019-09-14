@@ -3,13 +3,13 @@
   <div class="expand-content row">
     <app-menu-item
       *ngFor="let menuItem of menu" [menu]="menuItem"
-      [counter]="getOrderStatus(menuItem)"
+      [counter]="getOrderCounter(menuItem)"
       (addOrder)="addOrder($event)"
       (removeOrder)="removeOrder($event)">
     </app-menu-item>
   </div>
   <div class="row reversed">
-    <button mat-raised-button (click)="close()" color="primary" class="button">Guardar</button>
+    <button mat-raised-button (click)="save()" color="primary" class="button">Guardar</button>
     <button mat-raised-button (click)="close()" color="warn" class="button">Cancelar</button>
   </div>
 </div>

@@ -1,9 +1,11 @@
 <div class="fill column">
-  <p class="menu-item-content">
-    {{ menu.name }}
-    {{ counter }}
-  </p>
-  <div class="row">
+  <div class="row menu-item-content">
+    <div class="counter">{{ counter }}</div>
+    <div class="menu-name">
+      {{ menu.name }}
+    </div>
+  </div>
+  <div class="row actions">
     <button mat-button color="primary" (click)="add()">Agregar</button>
     <button mat-button color="warn" (click)="remove()">Quitar</button>
   </div>

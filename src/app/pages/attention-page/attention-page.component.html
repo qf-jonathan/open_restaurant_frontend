@@ -5,5 +5,9 @@
                  [ambient]="ambient"
                  [routerLink]="['/ambient', ambient.id]">
     </app-ambient>
+    <app-ambient
+      [ambient]="{ id: 0, name:'Cocina', active:true, tables: []}"
+      [routerLink]="['/kitchen']">
+    </app-ambient>
   </div>
 </div>

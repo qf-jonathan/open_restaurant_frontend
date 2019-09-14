@@ -12,6 +12,7 @@ import { AmbientComponent } from './components/ambient/ambient.component';
 import { AmbientPageComponent } from './pages/ambient-page/ambient-page.component';
 import { OrderCreatorComponent } from './components/order-creator/order-creator.component';
 import { MenuItemComponent } from './components/menu-item/menu-item.component';
+import { KitchenPageComponent } from './pages/kitchen-page/kitchen-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MenuItemComponent } from './components/menu-item/menu-item.component';
     AmbientComponent,
     AmbientPageComponent,
     OrderCreatorComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    KitchenPageComponent
   ],
   entryComponents: [OrderCreatorComponent],
   imports: [

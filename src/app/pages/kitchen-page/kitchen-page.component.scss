@@ -1,0 +1,29 @@
+.state-container {
+  padding: 10px;
+  background: aliceblue;
+  flex: 1 1 0;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+}
+
+.state {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.state-title {
+  height: 20px;
+  text-align: center;
+}
+
+.state-content {
+  flex: 1 1 0;
+  overflow: auto;
+}
+
+.left-separator {
+  border-left: 1px dotted black;
+}
